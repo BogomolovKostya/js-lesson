@@ -8,8 +8,9 @@
  */
 function delayPromise(seconds) {
     return new Promise(function(resolve) {
-        seconds = 1000;
-        setTimeout(resolve, seconds);
+        setTimeout(function () {
+            resolve();
+        }, seconds * 1000);
     });
 }
 
